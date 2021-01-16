@@ -107,7 +107,7 @@ Resources:
           function recordPost(postUrl, title) {
               return ddb.put({
                   TableName: 'DynamoDevNewsTable',
-                  ConditionExpression: 
+                  ConditionExpression: "attribute_not_exists(PostUrl)", 
                   Item: {
                       PostUrl: postUrl,
                       Title: title
