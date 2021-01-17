@@ -226,7 +226,7 @@ Resources:
                 passthroughBehavior: "when_no_match"
                 type: "mock"
           /listArticles:  #EDIT
-            get:
+            get: #EDIT
               description: List Articles #EDIT
               consumes:
                 - application/json
