@@ -124,7 +124,7 @@ Resources:
             callback(null, {
               statusCode: 500,
               body: JSON.stringify({
-                Error: errorMessage,
+                message: errorMessage,
                 Reference: awsRequestId,
               }),
               headers: {
