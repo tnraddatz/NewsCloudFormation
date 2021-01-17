@@ -62,7 +62,14 @@ Resources:
       Timeout: 5
       MemorySize: 128
       Handler: index.handler
-
+      Code:
+        ZipFile: >
+          const randomBytes = require('crypto').randomBytes;
+          const AWS = require('aws-sdk');
+          const ddb = new AWS.DynamoDB.DocumentClient();
+          exports.handler = (event, context, callback) => {
+          }
+          
   ListNewsFunction: #EDIT
     Type: AWS::Lambda::Function
     Properties:
@@ -72,6 +79,13 @@ Resources:
       Timeout: 5
       MemorySize: 128
       Handler: index.handler
+      Code:
+        ZipFile: >
+          const randomBytes = require('crypto').randomBytes;
+          const AWS = require('aws-sdk');
+          const ddb = new AWS.DynamoDB.DocumentClient();
+          exports.handler = (event, context, callback) => {
+          }
 # END APIS
 
   DevNewsApi:
